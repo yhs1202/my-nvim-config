@@ -15,6 +15,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
+require("config.globals")  -- Load global variables
+require("config.options")  -- Load options
+require("config.keymaps")  -- Load key mappings
+require("config.autocmds") -- Load autocommands
+
+
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
