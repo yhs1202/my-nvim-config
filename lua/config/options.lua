@@ -1,17 +1,17 @@
 local options = {
   -- Visual
   number = true,                          -- Show absolute line numbers
-  relativenumber = false,                 -- Disable relative line numbers
+  relativenumber = true,                  -- Enable relative line numbers
   termguicolors = true,                   -- Enable 24-bit true color support
   signcolumn = "yes",                     -- Always show the sign column (e.g., for diagnostics, git)
 
   -- Tabs and indentation
-  tabstop = 4,                            -- Number of spaces a <Tab> in the file counts for
-  shiftwidth = 4,                         -- Number of spaces used for each indentation level
+  tabstop = 2,                            -- Number of spaces a <Tab> in the file counts for
+  shiftwidth = 2,                         -- Number of spaces used for each indentation level
   smartindent = true,                     -- Enable smart indentation for new lines
   wrap = false,                           -- Disable line wrapping (long lines stay on one line)
   expandtab = true,                       -- Convert tabs to spaces
-  numberwidth = 4,                        -- Width of the number column (left side)
+  numberwidth = 2,                        -- Width of the number column (left side)
   cursorline = true,                      -- Highlight the current line
   sidescrolloff = 8,                      -- Minimum columns to keep left/right of cursor during horizontal scroll
 
@@ -52,4 +52,12 @@ local options = {
 
 for k, v in pairs(options) do
   vim.opt[k] = v
+end
+
+-- Set shell to PowerShell on Windows for better compatibility
+if vim.loop.os_uname().sysname == "Windows_NT" then
+  vim.o.shell = [["C:/Program Files/Git/bin/bash.exe"]]
+  vim.o.shellcmdflag = "-c"
+  vim.o.shellquote = ""
+  vim.o.shellxquote = ""
 end

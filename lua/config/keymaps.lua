@@ -34,8 +34,7 @@ map("n", "<S-h>", ":bprevious<CR>",     { silent = true, desc = "Previous Buffer
 map("n", "<S-Left>", ":bprevious<CR>",  { silent = true, desc = "Previous Buffer" })
 
 -- floating terminal
-map("n", "<leader>ft", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal " })
-map({"n","t"}, "<c-`>",function() Snacks.terminal() end, { desc = "Terminal " })
+map({"n","t"}, "<M-`>",function() Snacks.terminal() end, { desc = "Terminal" })
 
 ---------------------------------------------------------------------------------------------------
 --------------------------------------------- EDITING ---------------------------------------------
@@ -60,7 +59,7 @@ map("v", "<A-Up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", 
 map({"n", "x"}, "gw", "*N", { desc = "Search word under cursor" })
 
 -- Format code
-map({"n", "x"}, "<leader>cf", function()
+map({"n", "x"}, "<leader>ff", function()
     vim.lsp.buf.format()
 end, { desc = "Format code" })    
 
