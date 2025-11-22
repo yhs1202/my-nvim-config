@@ -15,3 +15,6 @@ My Neovim configuration repository
 - [copilot.lua](https://github.com/zbirenbaum/copilot.lua): Copilot
 
 - [blink.cmp.lua](https://github.com/saghen/blink.cmp): Auto Completion (https://cmp.saghen.dev/)
+
+- [autopairs.lua](https://github.com/windwp/nvim-autopairs): Autopair parenthesis
+
