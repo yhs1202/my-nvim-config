@@ -57,7 +57,7 @@ end
 -- Prevent auto-commenting on new lines
 vim.opt.formatoptions:remove({ "c", "r", "o" })
 
--- Set shell to PowerShell on Windows for better compatibility
+-- Set shell to git-bash on Windows for better compatibility
 if vim.loop.os_uname().sysname == "Windows_NT" then
   vim.o.shell = [["C:/Program Files/Git/bin/bash.exe"]]
   vim.o.shellcmdflag = "-c"
