@@ -21,31 +21,33 @@ return {
     })
 
     -- keymaps
+    local map = vim.keymap.set
     local suggestion = require("copilot.suggestion")
 
+    map("i", "<M-\\>", function()
+      suggestion.accept_line()
+    end, { desc = " Accept" })
 
-    vim.keymap.set("i", "<C-l>", function()
-      suggestion.accept()
-    end, { desc = "Copilot Accept" })
-
-
-    vim.keymap.set("i", "<C-n>", function()
+    map("i", "<M-n>", function()
       suggestion.next()
-    end, { desc = "Copilot Next Suggestion" })
+    end, { desc = " Next Suggestion" })
 
-    vim.keymap.set("i", "<C-p>", function()
+    map("i", "<M-p>", function()
       suggestion.prev()
-    end, { desc = "Copilot Previous Suggestion" })
+    end, { desc = " Previous Suggestion" })
 
-    vim.keymap.set("i", "<C-]>", function()
+    map("i", "<M-]>", function()
       suggestion.dismiss()
-    end, { desc = "Copilot Dismiss" })
+    end, { desc = " Dismiss" })
+
+    map("i", "<M-[>", function()
+      suggestion.toggle_auto_trigger()
+    end, { desc = " Toggle Auto Trigger" })
 
     local panel = require("copilot.panel")
-
-    vim.keymap.set("n", "<leader>cp", function()
-      panel.open()
-    end, { desc = "Copilot Panel" })
+    map("n", "<leader>cp", function()
+      panel.toggle()
+    end, { desc = " Copilot Panel" })
     ------------------------------------------------------------------
   end,
 }
