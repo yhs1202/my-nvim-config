@@ -18,3 +18,5 @@ My Neovim configuration repository
 
 - [autopairs.lua](https://github.com/windwp/nvim-autopairs): Autopair parenthesis
 
+- [flash.lua](https://github.com/folke/flash.nvim): Enhanced Navigation
+
