@@ -9,12 +9,12 @@
 
 
 -- Set colorscheme after lazy.nvim has loaded plugins
-vim.api.nvim_create_autocmd("User", {
-  pattern = "VeryLazy",
-  callback = function()
-    vim.cmd("colorscheme habamax")
-  end,
-})
+-- vim.api.nvim_create_autocmd("User", {
+--   pattern = "VeryLazy",
+--   callback = function()
+--     vim.cmd("colorscheme habamax")
+--   end,
+-- })
 
 -- Disable automatic comment insertion on new lines
 vim.api.nvim_create_autocmd("FileType", {
