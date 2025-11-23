@@ -4,6 +4,10 @@ local map = vim.keymap.set
 -----------------------------------------------------------------------------------
 ----------------------------------- VISUAL ----------------------------------------
 -----------------------------------------------------------------------------------
+
+-- CheckHealth
+map("n", "<leader>ch", ":checkhealth<CR>", { silent = true, desc = "Check Health" })
+
 -- Neotree toggle
 map("n", "<leader>e", ":Neotree toggle<CR>", { silent = true, desc = "Toggle Neotree" })
 
@@ -56,7 +60,7 @@ map("v", "<A-k>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv",  
 map("v", "<A-Up>", ":<C-u>execute \"'<,'>move '<-\" . (v:count1 + 1)<cr>gv=gv", { desc = "Move Up" })
 
 -- Search word under cursor
-map({"n", "x"}, "gw", "*N", { desc = "Search word under cursor" })
+map({"n", "x"}, "gw", "*N", { silent = true, desc = "Search word under cursor" })
 
 -- Format code
 map({"n", "x"}, "<leader>ff", function()
