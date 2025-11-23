@@ -15,3 +15,11 @@ vim.api.nvim_create_autocmd("User", {
     vim.cmd("colorscheme habamax")
   end,
 })
+
+-- Disable automatic comment insertion on new lines
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    vim.opt.formatoptions:remove({ "c", "r", "o" })
+  end,
+})
