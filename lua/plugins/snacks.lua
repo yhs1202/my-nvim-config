@@ -13,7 +13,10 @@ return {
     animate = { enabled = true }, 	    -- Efficient animations including over 45 easing functions (library)	
     bigfile = { enabled = true }, 	    -- Deal with big files	‼️
     bufdelete = { enabled = true }, 	  -- Delete buffers without disrupting window layout	
-    dashboard = { enabled = true }, 	  -- Beautiful declarative dashboards	‼️
+    dashboard = { 
+      enabled = true,
+      theme = {enabled = false }, 
+    }, 	  -- Beautiful declarative dashboards	‼️
     debug = { enabled = true }, 	      -- Pretty inspect & backtraces for debugging	
     dim = { enabled = true }, 	        -- Focus on the active scope by dimming the rest	
     explorer = { enabled = false },   	  -- A file explorer (picker in disguise)	‼️
@@ -25,7 +28,10 @@ return {
     input = { enabled = true }, 	      -- Better vim.ui.input	‼️
     keymap = { enabled = true }, 	      -- Better vim.keymap with support for filetypes and LSP clients	
     layout = { enabled = true }, 	      -- Window layouts	
-    lazygit = { enabled = true },       -- Open LazyGit in a float, auto-configure colorscheme and integration with Neovim	
+    lazygit = { 
+      enabled = true,
+      theme = { enabled = false }, 
+    },       -- Open LazyGit in a float, auto-configure colorscheme and integration with Neovim	
     notifier = { enabled = true },   	  -- Pretty vim.notify	‼️
     notify = { enabled = true }, 	      -- Utility functions to work with Neovim's vim.notify	
     picker = { enabled = true }, 	      -- Picker for selecting items	‼️
