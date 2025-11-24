@@ -15,8 +15,8 @@ return {
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
         disabled_filetypes = {
-          statusline = {"neo-tree"},
-          winbar = {"neo-tree"},
+          -- statusline = {"neo-tree"},
+          -- winbar = {"neo-tree"},
         },
         ignore_focus = {},
         always_divide_middle = true,
@@ -69,7 +69,10 @@ return {
       tabline = {},
       winbar = {},
       inactive_winbar = {},
-      extensions = {}
+      extensions = {
+        'mason',
+        'neo-tree',
+      }
     })
   end
 }
