@@ -18,13 +18,5 @@ return {
       },
       automatic_installation = true,
     })
-    -- local mason_lspconfig = require("mason-lspconfig")
-    -- local lspconfig = require("lspconfig")
-    
-    -- for _, server in ipairs(mason_lspconfig.get_installed_servers()) do
-    --   if lspconfig[server] ~= nil then
-    --     lspconfig[server].setup({})
-    --   end
-    -- end
   end,
 }
